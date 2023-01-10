@@ -40,13 +40,15 @@ $("#form_reg").on("submit", function (e) {
     url: "http://big-event-api-t.itheima.net/api/reguser",
     method: "POST",
     data,
-  }).then((res) => {
-    layer.msg("注册成功，请登录！");
-    // 模拟人的点击行为
-    $("#link_login").click();
-  }).catch((err) => {
-    layer.msg("注册失败，请重新注册！");
-  });
+  })
+    .then((res) => {
+      layer.msg("注册成功，请登录！");
+      // 模拟人的点击行为
+      $("#link_login").click();
+    })
+    .catch((err) => {
+      layer.msg("注册失败，请重新注册！");
+    });
 });
 let ccc = document.querySelector("#form_login");
 $("#form_login").on("submit", function (e) {
